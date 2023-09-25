@@ -28,11 +28,21 @@ form.addEventListener("submit",function(event){
     
     // set nilai dari input form ke label
 
-    labelNama.innerText = nama.value
-    labelAvaliability.innerText = availability.value
-    labelUsia.innerText = usia.value
-    labelLokasi.innerText = lokasi.value
-    labelPengalaman.innerText = pengalaman.value
-    labelEmail.innerText = email.value
+    //local storage
+    localStorage.setItem( 'nama', nama.value )
+    localStorage.setItem( 'availability', availability.value )
+    localStorage.setItem( 'usia', usia.value )
+    localStorage.setItem( 'lokasi', lokasi.value )
+    localStorage.setItem( 'pengalaman', pengalaman.value )
+    localStorage.setItem( 'email', email.value )
+
+
+
+    labelNama.innerText = localStorage.getItem ('nama')
+    labelAvaliability.innerText = localStorage.getItem ('availability')
+    labelUsia.innerText = localStorage.getItem ('usia')
+    labelLokasi.innerText = localStorage.getItem ('lokasi')
+    labelPengalaman.innerText = localStorage.getItem ('pengalaman')
+    labelEmail.innerText = localStorage.getItem ('email')
 
 })
